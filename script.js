@@ -27,6 +27,8 @@ function addLetter(letter) {
   if (currentIndex < answerSpans.length) {
     answerSpans[currentIndex].innerText = letter;
     currentIndex++;
+    successElem.style.display = "none";
+    failElem.style.display = "none";
   }
 }
 
@@ -36,6 +38,21 @@ function checkAnswer() {
     .map((span) => span.innerText)
     .join("");
   if (answer === "CAT") {
+    successElem.style.display = "block";
+    failElem.style.display = "none";
+    resetAnswer();
+  } else {
+    failElem.style.display = "block";
+    successElem.style.display = "none";
+    resetAnswer();
+  }
+}
+function checkAnswer2() {
+  const answerSpans = document.querySelectorAll("#answer span");
+  const answer = Array.from(answerSpans)
+    .map((span) => span.innerText)
+    .join("");
+  if (answer === "HOUSE") {
     successElem.style.display = "block";
     failElem.style.display = "none";
     resetAnswer();

@@ -17,16 +17,17 @@
         <div class="flexR">
           <img
             class="scrambledImages"
-            src="img/cat.jpg"
+            src="img/house.jpg"
             alt="cat"
-            width="150px" />
+            width="120px" />
           <div class="flexC">
             <div id="options" class="flexR guess">
-              <span onclick="addLetter(this.innerText)">L</span>
+              <span onclick="addLetter(this.innerText)">E</span>
+              <span onclick="addLetter(this.innerText)">H</span>
+              <span onclick="addLetter(this.innerText)">S</span>
+              <span onclick="addLetter(this.innerText)">O</span>
               <span onclick="addLetter(this.innerText)">C</span>
-              <span onclick="addLetter(this.innerText)">A</span>
-              <span onclick="addLetter(this.innerText)">C</span>
-              <span onclick="addLetter(this.innerText)">B</span>
+              <span onclick="addLetter(this.innerText)">U</span>
               <span onclick="addLetter(this.innerText)">T</span>
             </div>
             <p>Your answer:</p>
@@ -34,8 +35,10 @@
               <span></span>
               <span></span>
               <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <button id="Check" onclick="checkAnswer()">Check</button>
+            <button id="Check" onclick="checkAnswer2()">Check</button>
             <button id="Check" onclick="resetAnswer()">Reset</button>
           </div>
         </div>
@@ -44,8 +47,8 @@
           <p id="failure" class="failure">Wrong! Try again</p>
         </div>
         <div class="flexR prevNext">
-          <div>Prev</div>
-          <div><a href="scrambler2.html">Next</a></div>
+          <div><a href="scrambler.html">Prev</a></div>
+          <div>Next</div>
         </div>
       </div>
     </main>
