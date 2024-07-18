@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4in1 game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="flexR">
+      <div>4 in 1 demo</div>
+      <div><a href="index.html">Home</a></div>
+    </nav>
+    <main>
+      <h1 onclick="startFunc()">Start</h1>
+      <div class="hidden" id="start">
+        <div class="flexR">
+          <img
+            class="scrambledImages"
+            src="img/cat.jpg"
+            alt="cat"
+            width="150px" />
+          <div class="flexC">
+            <div id="options" class="flexR guess">
+              <span onclick="addLetter(this.innerText)">L</span>
+              <span onclick="addLetter(this.innerText)">C</span>
+              <span onclick="addLetter(this.innerText)">A</span>
+              <span onclick="addLetter(this.innerText)">C</span>
+              <span onclick="addLetter(this.innerText)">B</span>
+              <span onclick="addLetter(this.innerText)">T</span>
+            </div>
+            <p>Your answer:</p>
+            <div id="answer" class="flexR">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <button id="Check" onclick="checkAnswer()">Check</button>
+          </div>
+        </div>
+        <div class="small">
+          <p id="success" class="success">Correct!</p>
+          <p id="failure" class="failure">Wrong!</p>
+        </div>
+        <div class="flexR">
+          <div>Prev</div>
+          <div>Next</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="center">
+        <p>Designed by Team Omega</p>
+        <p>for Testing purposes only</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
