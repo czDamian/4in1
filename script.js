@@ -38,6 +38,7 @@ function checkAnswer() {
   if (answer === "CAT") {
     successElem.style.display = "block";
     failElem.style.display = "none";
+    resetAnswer();
   } else {
     failElem.style.display = "block";
     successElem.style.display = "none";

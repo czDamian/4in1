@@ -23,8 +23,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
-  box-shadow: 0px 0px 4px 2px gold;
+  box-shadow: 0px 0px 2px 2px #6767f1;
   border-radius: 12px;
   padding: 12px;
 }
@@ -136,4 +135,9 @@ footer {
 }
 .small p {
   text-align: right;
+  margin-right: 20px;
+}
+.prevNext{
+    font-size: 14px;
+    text-decoration: underline;
 }
