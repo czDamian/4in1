@@ -37,8 +37,10 @@ function checkAnswer() {
     .join("");
   if (answer === "CAT") {
     successElem.style.display = "block";
+    failElem.style.display = "none";
   } else {
     failElem.style.display = "block";
+    successElem.style.display = "none";
     resetAnswer();
   }
 }
