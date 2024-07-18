@@ -26,6 +26,7 @@ main {
   box-shadow: 0px 0px 2px 2px #6767f1;
   border-radius: 12px;
   padding: 12px;
+  margin-bottom: 16px;
 }
 a {
   color: white;
@@ -51,8 +52,9 @@ a:hover {
 footer {
   position: absolute;
   bottom: 0;
-  right: 40%;
+  right: 25%;
   padding-bottom: 20px;
+  font-size: 14px;
 }
 
 .center {
@@ -137,7 +139,7 @@ footer {
   text-align: right;
   margin-right: 20px;
 }
-.prevNext{
-    font-size: 14px;
-    text-decoration: underline;
+.prevNext {
+  font-size: 14px;
+  text-decoration: underline;
 }
