@@ -14,6 +14,10 @@
     <main>
       <h1 onclick="startFunc()">Start</h1>
       <div class="hidden" id="start">
+        <div class="flexR small">
+          <span>Play Pass: <span class="gold" id="playPass">6</span> </span>
+          <span>Balance: <span class="gold" id="playBal">0</span> </span>
+        </div>
         <div class="flexR">
           <img
             class="scrambledImages"
@@ -42,6 +46,7 @@
         <div class="small">
           <p id="success" class="success">Correct! +6 points</p>
           <p id="failure" class="failure">Wrong! Try again</p>
+          <p id="outOfTries" class="failure">Out of tries for today!</p>
         </div>
         <div class="flexR prevNext">
           <div>Prev</div>

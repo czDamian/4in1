@@ -93,7 +93,7 @@ footer {
 
 /* important */
 .hidden {
-  display: none;
+  /* display: none; */
 }
 .block {
   display: block;
@@ -115,10 +115,12 @@ footer {
   border-color: orange;
 }
 .flexC .flexR span {
-  color: green;
-  border: 1px solid white;
+  color: black;
+  background-color: #01c3c0;
+  border: 1px dotted;
   padding: 0 4px;
   border-radius: 4px;
+  font-size: 14px;
 }
 .flexC button {
   color: #ffffff;
