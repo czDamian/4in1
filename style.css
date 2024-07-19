@@ -93,7 +93,7 @@ footer {
 
 /* important */
 .hidden {
-  /* display: none; */
+  display: none;
 }
 .block {
   display: block;

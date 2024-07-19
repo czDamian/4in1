@@ -24,7 +24,7 @@
             src="img/cat.jpg"
             alt="cat"
             width="150px" />
-          <div class="flexC">
+          <div class="flexC" id="q1">
             <div id="options" class="flexR guess">
               <span onclick="addLetter(this.innerText)">L</span>
               <span onclick="addLetter(this.innerText)">C</span>
@@ -39,8 +39,8 @@
               <span></span>
               <span></span>
             </div>
-            <button id="Check" onclick="checkAnswer()">Check</button>
-            <button id="Check" onclick="resetAnswer()">Reset</button>
+            <button id="Check" onclick="resetAnswer()">Clear</button>
+            <button id="Check" onclick="delLetter()">Del</button>
           </div>
         </div>
         <div class="small">

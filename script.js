@@ -36,63 +36,56 @@ function addLetter(letter) {
     successElem.style.display = "none";
     failElem.style.display = "none";
   }
+  if (currentIndex == answerSpans.length) {
+    const qId = answerSpans[0].closest(".flexC").id;
+    checkAnswer(qId);
+  }
+}
+
+function delLetter() {
+  const answerSpans = document.querySelectorAll("#answer span");
+  if (currentIndex > 0) {
+    currentIndex--;
+    answerSpans[currentIndex].innerText = "";
+    successElem.style.display = "none";
+    failElem.style.display = "none";
+  }
+}
+function resetAnswer() {
+  const answerSpans = document.querySelectorAll("#answer span");
+  answerSpans.forEach((span) => (span.innerText = ""));
+  currentIndex = 0;
 }
 function updatePassAndBal() {
   playPassElem.innerHTML = playPass;
   playBalElem.innerHTML = playBal;
 }
-
-function checkAnswer() {
+// hardcoded the answers here. How it works is that each question has a unique html id. the id corresponds to an answers object in the script file. so on submit, the function uses the html question id and matches it to the script question id and then checks if the answers are the same
+const answers = {
+  q1: "CAT",
+  q2: "HOUSE",
+};
+function checkAnswer(qId) {
   const answerSpans = document.querySelectorAll("#answer span");
   const answer = Array.from(answerSpans)
     .map((span) => span.innerText)
     .join("");
+  const correctAns = answers[qId];
+  console.log("you chose " + answer);
 
   if (playPass > 0) {
-    if (answer === "CAT") {
+    if (answer === correctAns) {
       successElem.style.display = "block";
       playPass -= 3;
       playBal += 6;
       updatePassAndBal();
       failElem.style.display = "none";
-      resetAnswer();
     } else {
       failElem.style.display = "block";
       successElem.style.display = "none";
-      resetAnswer();
     }
   } else {
     outOfTriesElem.style.display = "block";
     successElem.style.display = "none";
   }
-}
-function checkAnswer2() {
-  const answerSpans = document.querySelectorAll("#answer span");
-  const answer = Array.from(answerSpans)
-    .map((span) => span.innerText)
-    .join("");
-
-  if (playPass > 0) {
-    if (answer === "HOUSE") {
-      playPass -= 3;
-      playBal += 6;
-      updatePassAndBal();
-      successElem.style.display = "block";
-      failElem.style.display = "none";
-      resetAnswer();
-    } else {
-      failElem.style.display = "block";
-      successElem.style.display = "none";
-      resetAnswer();
-    }
-  } else {
-    outOfTriesElem.style.display = "block";
-    successElem.style.display = "none";
-  }
-}
-
-function resetAnswer() {
-  const answerSpans = document.querySelectorAll("#answer span");
-  answerSpans.forEach((span) => (span.innerText = ""));
-  currentIndex = 0;
 }
